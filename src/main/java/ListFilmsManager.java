@@ -22,10 +22,10 @@ public class ListFilmsManager {
 
     public Posters[] findLast() {
         int resultLenght;
-        if (films.length < 10) {
+        if (films.length < limit) {
             resultLenght = films.length;
         } else {
-            resultLenght = 10;
+            resultLenght = limit;
         }
         Posters[] tmp=new Posters[resultLenght];
         for (int i=0; i<films.length; i++){
