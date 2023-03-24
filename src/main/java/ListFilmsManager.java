@@ -27,9 +27,9 @@ public class ListFilmsManager {
         } else {
             resultLenght = limit;
         }
-        Posters[] tmp=new Posters[resultLenght];
-        for (int i=0; i<films.length; i++){
-            tmp[i]=films[films.length-1-i];
+        Posters[] tmp = new Posters[resultLenght];
+        for (int i = 0; i < films.length; i++) {
+            tmp[i] = films[films.length - 1 - i];
         }
         return tmp;
     }

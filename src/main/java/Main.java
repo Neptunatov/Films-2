@@ -2,10 +2,10 @@ public class Main {
     public static void main(String[] args) {
 
         Posters film1 = new Posters("Бладшот.");
-        Posters film2 = new Posters( "Вперёд");
-        Posters film3 = new Posters( "Отель Белград");
+        Posters film2 = new Posters("Вперёд");
+        Posters film3 = new Posters("Отель Белград");
         Posters film4 = new Posters("Человек-неведимка");
-        Posters film5 = new Posters( "Тролли.Мировой тур");
+        Posters film5 = new Posters("Тролли.Мировой тур");
         Posters film6 = new Posters("Номер один");
 
 

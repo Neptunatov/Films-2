@@ -104,6 +104,7 @@ class ListFilmsManagerTest {
 
         assertArrayEquals(actual, expected);
     }
+
     @Test
     public void findLastMoreBySix() {
         ListFilmsManager manager = new ListFilmsManager();
