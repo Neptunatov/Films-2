@@ -9,8 +9,6 @@ public class Main {
         Posters film6 = new Posters("Номер один");
 
 
-
-
         ListFilmsManager manager = new ListFilmsManager();
 
         manager.addFilm(film1);
@@ -19,7 +17,6 @@ public class Main {
         manager.addFilm(film4);
         manager.addFilm(film5);
         manager.addFilm(film6);
-
 
 
         Posters[] all = manager.findLast();
