@@ -12,6 +12,10 @@ class ListFilmsManagerTest {
     Posters film5 = new Posters("Тролли.Мировой тур");
     Posters film6 = new Posters("Номер один");
     Posters film7 = new Posters("Для теста");
+    Posters film8 = new Posters("Терминатор");
+    Posters film9 = new Posters("Доминатор");
+    Posters film10 = new Posters("Имитатор");
+    Posters film11 = new Posters("Сны с похмелья");
 
     @Test
     public void findLast() {
@@ -118,6 +122,41 @@ class ListFilmsManagerTest {
 
         Posters[] actual = manager.findLast();
         Posters[] expected = {film7, film6, film5, film4, film3, film2, film1};
+
+        assertArrayEquals(actual, expected);
+    }
+    //Протестированы должны быть как минимум следующие интересные случаи для метода получения последних фильмов:
+    // когда в менеджере фильмов меньше чем лимит, когда больше и когда столько же.
+    @Test
+    public void findLastIfLowLim() {
+        ListFilmsManager manager = new ListFilmsManager();
+        manager.addFilm(film1);
+        manager.addFilm(film2);
+        manager.addFilm(film3);
+
+        Posters[] actual = manager.findLast();
+        Posters[] expected = {film3, film2, film1};
+
+        assertArrayEquals(actual, expected);
+    }
+    @Test
+    public void findLastIfMoreLim() {
+
+        ListFilmsManager manager = new ListFilmsManager();
+        manager.addFilm(film1);
+        manager.addFilm(film2);
+        manager.addFilm(film3);
+        manager.addFilm(film4);
+        manager.addFilm(film5);
+        manager.addFilm(film6);
+        manager.addFilm(film7);
+        manager.addFilm(film8);
+        manager.addFilm(film9);
+        manager.addFilm(film10);
+        manager.addFilm(film11);
+
+        Posters[] actual = manager.findLast();
+        Posters[] expected = {film11, film10, film9,film8,film7, film6, film5, film4, film3, film2};
 
         assertArrayEquals(actual, expected);
     }
